@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>SIGN UP!</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Name</ion-label>
+      <ion-input [(ngModel)]="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Lastname</ion-label>
+      <ion-input [(ngModel)]="userLastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Cellphone</ion-label>
+      <ion-input [(ngModel)]="userCellphone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">E-Mail</ion-label>
+      <ion-input [(ngModel)]="userEMail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Address</ion-label>
+      <ion-input [(ngModel)]="userAddress"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Password</ion-label>
+      <ion-input type = "number" [(ngModel)]="userPassword"></ion-input>
+    </ion-item>
+    <!-- <button (click)="btnAddClicked()" ion-button>Add</button> -->
+    <!--
+    <ion-item>
+      <ion-label color="primary">Lastname</ion-label>
+      <ion-input placeholder="Text Input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">CellPhone </ion-label>
+      <ion-input type="number" placeholder="Number"></ion-input>
+    </ion-item>
+  -->
+  </ion-list>
+  <button (click)="btnAddClicked()" ion-button>Add</button>
+</ion-content>
