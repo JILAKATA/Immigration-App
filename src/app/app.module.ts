@@ -17,7 +17,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database'; 
 
 import { FIREBASE_CONFIG } from "./app.firebase.config";
+import { FIREBASE_CONFIG1 } from "./app.firebase1.config";
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { LawyerLogPage } from '../pages/lawyer-log/lawyer-log';
+import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
 //import { AngularFireAuth } from 'angularfire2/auth';
 
   /*
@@ -30,6 +33,18 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     messagingSenderId: "497810205579"
   };
   */
+
+  /*
+    var1 config = {
+    apiKey: "AIzaSyDtVSxEmYCOzyMGfRGqtLfdQ4fz1f6szLc",
+    authDomain: "lawyerdatabase.firebaseapp.com",
+    databaseURL: "https://lawyerdatabase.firebaseio.com",
+    projectId: "lawyerdatabase",
+    storageBucket: "lawyerdatabase.appspot.com",
+    messagingSenderId: "581229497300"
+  };
+
+  */
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +53,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     HomePage,
     TabsPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    LawyerLogPage,
+    LawyerSignPage,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +63,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AngularFireDatabaseModule,
     //AngularFireModule.initializeApp(config)
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG1),
     //AngularFireAuth,
     AngularFireAuthModule
 
@@ -58,7 +76,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     HomePage,
     TabsPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    LawyerLogPage,
+    LawyerSignPage,
   ],
   providers: [
     StatusBar,

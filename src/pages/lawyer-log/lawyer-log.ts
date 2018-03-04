@@ -13,12 +13,12 @@ import { AboutPage } from '../about/about';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-lawyer-log',
+  templateUrl: 'lawyer-log.html',
 })
-export class LoginPage {
-  userEMail
-  userPassword
+export class LawyerLogPage{
+  lawyerEMail
+  lawyerPassword
   constructor(public navCtrl: NavController, public navParams: NavParams, private angularFireauth: AngularFireAuth) {
   
   }
@@ -27,9 +27,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
  */
-login(){
+login5(){
   /*this.angularFireauth.auth.createUserWithEmailAndPassword(this.userEMail, this.userPassword);*/
-  const send = this.angularFireauth.auth.signInWithEmailAndPassword(this.userEMail, this.userPassword);
+  const send = this.angularFireauth.auth.signInWithEmailAndPassword(this.lawyerEMail, this.lawyerPassword);
   if(send){
     this.navCtrl.push(AboutPage);
   }
