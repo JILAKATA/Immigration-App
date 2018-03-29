@@ -14,44 +14,50 @@
   <h2>SIGN UP!</h2>
   <ion-list>
     <ion-item>
+
+      <!-- Enter Name, and store it to the variable lawyerName-->
       <ion-label color="primary">Name</ion-label>
       <ion-input [(ngModel)]="lawyerName"></ion-input>
     </ion-item>
+
+    <!-- Enter LastName, and store it to the variable lawyerLastname-->
     <ion-item>
       <ion-label color="primary">Lastname</ion-label>
       <ion-input [(ngModel)]="lawyerLastname"></ion-input>
     </ion-item>
+
+    <!-- Enter Cellphone number, and store it to the variable lawyerCellphone-->
     <ion-item>
       <ion-label color="primary">Cellphone</ion-label>
       <ion-input [(ngModel)]="lawyerCellphone"></ion-input>
     </ion-item>
+
+    <!-- Enter E-mail, and store it to the variable lawyerEmail-->
     <ion-item>
       <ion-label color="primary">E-Mail</ion-label>
       <ion-input [(ngModel)]="lawyerEMail"></ion-input>
     </ion-item>
+
+    <!-- Enter Address, and store it to the variable lawyerAddress-->
     <ion-item>
       <ion-label color="primary">Address</ion-label>
       <ion-input [(ngModel)]="lawyerAddress"></ion-input>
     </ion-item>
+
+    <!-- Enter Password, and store it to the variable lawyerPassword-->
     <ion-item>
       <ion-label color="primary">Password</ion-label>
       <ion-input type = "number" [(ngModel)]="lawyerPassword"></ion-input>
     </ion-item>
+
+    <!-- Enter Company Namme, and store it to the variable lawyerComanyname-->
     <ion-item>
       <ion-label color="primary">Company</ion-label>
       <ion-input [(ngModel)]="lawyerCompanyname"></ion-input>
     </ion-item>
-    <!-- <button (click)="btnAddClicked()" ion-button>Add</button> -->
-    <!--
-    <ion-item>
-      <ion-label color="primary">Lastname</ion-label>
-      <ion-input placeholder="Text Input"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">CellPhone </ion-label>
-      <ion-input type="number" placeholder="Number"></ion-input>
-    </ion-item>
-  -->
   </ion-list>
+
+  <!-- Once all the requirements were filled, pressbutton to store
+  all the information to the database-->
   <button (click)="btnAddClicked1()" ion-button>Add</button>
 </ion-content>

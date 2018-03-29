@@ -6,30 +6,26 @@ import { AboutPage } from '../about/about';
 
 /**
  * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
  */
 
 @IonicPage()
+
 @Component({
   selector: 'page-lawyer-log',
   templateUrl: 'lawyer-log.html',
 })
 export class LawyerLogPage{
-  lawyerEMail
-  lawyerPassword
+  lawyerEMail   // lawyer email input
+  lawyerPassword  //Lawyer password input
   constructor(public navCtrl: NavController, public navParams: NavParams, private angularFireauth: AngularFireAuth) {
   
   }
- /*
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
- */
+ /*Once Lawyer press button to login, system will authemticate that E-mail and Password
+  matches with the one on our database cloud, provided when create the account */
 login5(){
-  /*this.angularFireauth.auth.createUserWithEmailAndPassword(this.userEMail, this.userPassword);*/
   const send = this.angularFireauth.auth.signInWithEmailAndPassword(this.lawyerEMail, this.lawyerPassword);
+  
+  /*If Email and Password matches, goes to the next page*/
   if(send){
     this.navCtrl.push(AboutPage);
   }

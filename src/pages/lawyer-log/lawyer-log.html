@@ -14,26 +14,20 @@
 
 
 <ion-content padding>
-<!--
-  <ion-item>
-    <ion-label floating>Email Address</ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-  </ion-item>
-
--->
+  
+  <!-- Lawyer must enter same email that provided when create the account-->
 <ion-item>
   <ion-label color="primary">E-Mail</ion-label>
   <ion-input [(ngModel)]="lawyerEMail"></ion-input>
 </ion-item>
-<!--
-  <ion-item>
-    <ion-label floating>Password</ion-label>
-    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-  </ion-item>
--->
+
+
+<!-- Lawyer enter password to login, it must be only integers-->
 <ion-item>
   <ion-label color="primary">Password</ion-label>
   <ion-input type = "number" [(ngModel)]="lawyerPassword"></ion-input>
+
+<!-- Once Lawyer enter E-mail and password, must click on button to login-->  
 </ion-item>
   <button ion-button (click)="login5()">Login</button>
 
