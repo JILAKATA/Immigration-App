@@ -12,7 +12,9 @@ import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
+//import { Camera } from '@ionic-native/camera';
 import { AngularFireModule } from 'angularfire2'; 
 import { AngularFireDatabaseModule } from 'angularfire2/database'; 
 
@@ -21,6 +23,7 @@ import { FIREBASE_CONFIG1 } from "./app.firebase1.config";
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LawyerLogPage } from '../pages/lawyer-log/lawyer-log';
 import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
+//import { LogOptionsPage } from '../pages/log-options/log-options';
 //import { AngularFireAuth } from 'angularfire2/auth';
 
   /*
@@ -82,6 +85,8 @@ import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
   ],
   providers: [
     StatusBar,
+    Geolocation,
+    GoogleMaps,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
