@@ -4,7 +4,7 @@
 
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { Geolocation, Geoposition, GeolocationOptions } from '@ionic-native/geolocation';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { registerLocaleData } from '@angular/common';
@@ -14,14 +14,15 @@ import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions,
     CameraPosition, MarkerOptions, Marker, LatLng } from '@ionic-native/google-maps';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-client',
+  templateUrl: 'client.html'
 })
 
 
-export class AboutPage {
+export class ClientPage {
   map: any;
   markers:any;
+  options:GeolocationOptions;
   arrayData = []
 
   constructor(public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform, private firedatab: AngularFireDatabase, 

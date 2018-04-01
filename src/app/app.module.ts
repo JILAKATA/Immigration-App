@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { ClientPage } from '../pages/client/client';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -23,6 +23,8 @@ import { FIREBASE_CONFIG1 } from "./app.firebase1.config";
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LawyerLogPage } from '../pages/lawyer-log/lawyer-log';
 import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
+import { LawyerPage } from '../pages/lawyer/lawyer';
+import { UserClientPage } from '../pages/user-client/user-client';
 //import { LogOptionsPage } from '../pages/log-options/log-options';
 //import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -51,7 +53,7 @@ import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    ClientPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -59,6 +61,8 @@ import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
     LoginPage,
     LawyerLogPage,
     LawyerSignPage,
+    UserClientPage,
+    LawyerPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,7 @@ import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    ClientPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -82,6 +86,8 @@ import { LawyerSignPage } from '../pages/lawyer-sign/lawyer-sign';
     LoginPage,
     LawyerLogPage,
     LawyerSignPage,
+    UserClientPage,
+    LawyerPage
   ],
   providers: [
     StatusBar,

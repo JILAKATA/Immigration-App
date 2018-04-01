@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { registerLocaleData } from '@angular/common';
-import { AboutPage } from '../about/about';
+import { ClientPage } from '../client/client';
 
 /**
  * Generated class for the LoginPage page.
@@ -27,7 +27,7 @@ login5(){
   
   /*If Email and Password matches, goes to the next page*/
   if(send){
-    this.navCtrl.push(AboutPage);
+    this.navCtrl.push(ClientPage);
   }
 }
 }
