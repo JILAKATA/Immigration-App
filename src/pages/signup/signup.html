@@ -9,27 +9,27 @@
   <ion-list>
     <ion-item>
       <ion-label color="primary">Name</ion-label>
-      <ion-input [(ngModel)]="userName"></ion-input>
+      <ion-input [(ngModel)]="information.userName"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Lastname</ion-label>
-      <ion-input [(ngModel)]="userLastname"></ion-input>
+      <ion-input [(ngModel)]="information.userLastname"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Cellphone</ion-label>
-      <ion-input [(ngModel)]="userCellphone"></ion-input>
+      <ion-input [(ngModel)]="information.userCellphone"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">E-Mail</ion-label>
-      <ion-input [(ngModel)]="userEMail"></ion-input>
+      <ion-input [(ngModel)]="information.userEMail"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Address</ion-label>
-      <ion-input [(ngModel)]="userAddress"></ion-input>
+      <ion-input [(ngModel)]="information.userAddress"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Password</ion-label>
-      <ion-input type = "number" [(ngModel)]="userPassword"></ion-input>
+      <ion-input type = "number" [(ngModel)]="information.userPassword"></ion-input>
     </ion-item>
     <!-- <button (click)="btnAddClicked()" ion-button>Add</button> -->
     <!--
@@ -43,5 +43,5 @@
     </ion-item>
   -->
   </ion-list>
-  <button (click)="btnAddClicked()" ion-button>Add</button>
+  <button (click)="register(information)" ion-button>Add</button>
 </ion-content>

@@ -5,17 +5,21 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { Geolocation, Geoposition, GeolocationOptions } from '@ionic-native/geolocation';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { registerLocaleData } from '@angular/common';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Information } from '../../modules/information';
+import { FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from 'angularfire2';
 declare var google: any;
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions,
     CameraPosition, MarkerOptions, Marker, LatLng } from '@ionic-native/google-maps';
 
 @Component({
   selector: 'page-client',
-  templateUrl: 'client.html'
+  templateUrl: 'client.html',
+  providers: [AngularFireAuth]
 })
 
 
@@ -23,15 +27,18 @@ export class ClientPage {
   map: any;
   markers:any;
   options:GeolocationOptions;
-  arrayData = []
+  arrayData = [];
+  information = {} as Information;
+  longitude1
+  latitude1
 
   constructor(public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform, private firedatab: AngularFireDatabase, 
-    private angularFireauth: AngularFireAuth) {
+    private angularFireauth: AngularFireAuth, public afDatabase: AngularFireDatabase, private afAuth: AngularFireAuth) {
 
-      this.firedatab.list("/userDataBase/").subscribe(_data => {
-        this.arrayData = _data;
+     // this.firedatab.list("/userDataBase/").subscribe(_data => {
+       // this.arrayData = _data;
   
-      });
+      //});
     }
 
   ionViewWillEnter(){
@@ -84,13 +91,23 @@ export class ClientPage {
       `
       ;
       marker.setMap(this.map);
-
+      this.longitude1.information = lng;
+      this.latitude1.information = lat;
       /*In this two statements, we will send the latitude and longetude
       to the database on Firebase.
       The idea is to record the data so the Lawyer will have the client's
       location anywhere in the US*/
-      this.firedatab.list("/userDataBase/").push(lat)
-      this.firedatab.list("/userDataBase/").push(lng)
+      //this.firedatab.list("/userDataBase/").push(lat)
+      //this.firedatab.list("/userDataBase/").push(lng)
+      this.afAuth.authState.subscribe(auth => {
+        this.afDatabase.object(`userDataBase/${auth.uid}`).update(this.information);
+    
+    
+    
+        
+    
+    })
+      
     }
 
 }

@@ -30,8 +30,6 @@ export class LawyerPage{
     this.navCtrl.push(LawyerLogPage)
 
   }
- // ionViewDidLoad() {
-   // console.log('ionViewDidLoad LawyerPage');
- // }
+
 
 }

@@ -27,16 +27,5 @@ export class HomePage {
     this.navCtrl.push(UserClientPage)
   }
 
-  //Load if lawyer wants to create an account
-  //load3(){
-    //this.navCtrl.push(LawyerSignPage)
-
-  //}
-
-  //Load to Lawyer-log page if Lawyer has already an accounts
-  //load2(){
-    //this.navCtrl.push(LawyerLogPage)
-
-  //}
 }
 
